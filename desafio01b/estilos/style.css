@@ -1,0 +1,143 @@
+@font-face {
+    font-family:extrabold;
+    src: url(../fonts/static/Inter-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family:bold;
+    src: url(../fonts/static/Inter-Bold.ttf);
+}
+
+@font-face {
+    font-family:normal;
+    src: url(../fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+p{
+    color: rgb(112, 112, 112);
+}
+
+h2{
+    color: black;
+}
+
+
+header.head-mobile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+}
+
+header.head-mobile> img[src="images/icon-menu.svg"]{
+    width: 65px;
+    height: 25px;
+}
+
+main.main-mobile{
+    padding: 25px;
+}
+
+.main-mobile>img[src="images/image-web-3-mobile.jpg"]{
+    max-width: 100%;
+}
+
+.info-mobile h2{
+    font-size: 3em;
+    font-family:extrabold;
+    margin-top: 25px;
+}
+
+.info-mobile p{
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+.info-mobile button.button-pink{
+    background-color: rgb(255, 114, 121);
+    border: none;
+    padding: 15px 40px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family:bold;
+    color: white;
+}
+
+.info-mobile{
+    margin-bottom: 45px;
+}
+
+.box-blue-mobile{
+    background-color: #020113;
+    box-sizing: border-box;
+    padding: 25px;
+}
+
+.box-blue-mobile h2{
+    color: rgb(238, 191, 61);
+    font-size: 2.5em;
+
+}
+
+.box-blue-mobile h3{
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    margin-top: 35px;
+}
+
+.box-blue-mobile hr{
+    margin-top: 35px;
+}
+
+.eletronics-mobile{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.devices-mobile{
+    display: flex;
+    flex-direction: row;
+    height: 120px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.img-eletronics{
+    width: 50%;
+    height: 100%;
+}
+
+.img-eletronics> img{
+    max-width: 100%;
+    height: 100%;
+}
+
+.info-mobile-eletronics{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.info-mobile-eletronics> h2{
+    color: #ccc;
+    font-family:bold;
+    font-size: 2.5em;
+    flex-grow: 1;
+}
+
+.info-mobile-eletronics h3{
+    font-family:extrabold;
+    font-weight: bolder;
+    flex-grow: 2;
+}
