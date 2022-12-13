@@ -68,6 +68,7 @@ main.main-mobile{
     letter-spacing: 3px;
     font-family:bold;
     color: white;
+    text-align: center;
 }
 
 .info-mobile{
@@ -140,4 +141,446 @@ main.main-mobile{
     font-family:extrabold;
     font-weight: bolder;
     flex-grow: 2;
+}
+
+.main-desk{
+    display: none;
+}
+
+@media screen and (min-width:1000px) and (max-width:1024px) {
+    .main-mobile{
+        display: none;
+    }
+
+    .head-mobile{
+        display: none;
+    }
+
+    .head-mobile> img{
+        display: none;
+    }
+
+    .main-desk{
+        display: block;
+    }
+
+    body{
+        background-color: whitesmoke;
+    }
+
+    .main-desk{
+        background-color: white;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.404);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        padding: 50px 100px;
+        padding-top: 180px;
+        box-sizing: border-box;
+    }
+
+    .head-desk{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .menu-desk{
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .menu-desk> ul{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menu-desk> ul> li{
+        list-style-type: none;
+        margin-left: 25px;
+    }
+
+    .menu-desk> ul> li> a{
+        text-decoration: none;
+        color: rgb(82, 82, 82);
+        font-weight: 600;
+    }
+
+    .articles-desk{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 240px 170px 100px;
+        gap: 20px;
+        grid-template-areas:
+            "img img  box"
+            "info info box"
+            "fig fig  fig"
+        ;
+    }
+
+    
+
+    .articles-desk> div:nth-child(1){
+        background-color: blue;
+        grid-area:img;
+    }
+
+    .articles-desk> div:nth-child(2){
+        background-color: #020113;
+        grid-area:box;
+        width: 290px;
+        box-sizing: border-box;
+        padding: 15px;
+    }
+
+    .articles-desk> div:nth-child(3){
+        grid-area:info;
+    }
+
+    .articles-desk> div:nth-child(4){
+        grid-area:fig;
+    }
+
+    .fundo-img{
+        background: url(../images/image-web-3-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+   
+    .box-blue-desk{
+        box-sizing: border-box;
+        padding: 5px;
+    }
+    
+    .box-blue-desk h2{
+        color: rgb(238, 191, 61);
+        font-size: 2em;
+    
+    }
+    
+    .box-blue-desk h3{
+        color: white;
+        font-size: 1.2em;
+        margin-bottom: 5px;
+        margin-top: 15px;
+    }
+    
+    .box-blue-desk hr{
+        margin-top: 15px;
+    }
+
+    .info-desk{
+        display: flex;
+    }
+
+    .items{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .items> h2{
+        font-size: 3.3vw;
+    }
+
+    .items> p{
+        flex-grow: 2;
+
+    }
+
+    .items> .button-pink{
+        align-self: flex-start;
+        flex-grow: 1;
+    }
+
+    .items:nth-of-type(1){
+        width: 50%;
+    }
+
+    .items:nth-of-type(2){
+        width: 70%;
+        text-align: justify;
+    }
+
+     button.button-pink{
+        background-color: rgb(255, 114, 121);
+        border: none;
+        padding: 15px 40px;
+        margin-top: 20px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-family:bold;
+        color: white;
+        text-align: center;
+    }
+
+    .fig{
+        display: flex;
+
+    }
+
+    .articles{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        margin-top: 30px;
+
+    }
+
+    .image{
+        height: 100%;
+        width: 30%;
+    }
+
+    .image> img{
+        max-width: 100%;
+        height: 100%;
+    }
+    
+    .information{
+        height: 100%;
+        width: 60%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 2;
+    }
+
+    .information h2{
+        flex-grow: 1;
+        color: #ccc;
+    }
+
+    .information h3{
+        flex-grow: 2;
+        font-size: 1em;
+
+    }
+
+    .information p{
+        font-size: 0.8em;
+    }
+}
+
+@media  screen and (min-width: 1025px) {
+    .main-mobile{
+        display: none;
+    }
+
+    .head-mobile{
+        display: none;
+    }
+
+    .head-mobile> img{
+        display: none;
+    }
+
+    .main-desk{
+        display: block;
+    }
+
+    body{
+        background-color: whitesmoke;
+    }
+
+    .main-desk{
+        background-color: white;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.404);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 85vw;
+        padding: 50px 100px;
+        padding-bottom: 80px;
+        box-sizing: border-box;
+    }
+
+    .head-desk{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .menu-desk{
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .menu-desk> ul{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menu-desk> ul> li{
+        list-style-type: none;
+        margin-left: 25px;
+    }
+
+    .menu-desk> ul> li> a{
+        text-decoration: none;
+        color: rgb(82, 82, 82);
+        font-weight: 600;
+    }
+
+    .articles-desk{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 240px 170px 100px;
+        gap: 20px;
+        grid-template-areas:
+            "img img  box"
+            "info info box"
+            "fig fig  fig"
+        ;
+    }
+
+    
+
+    .articles-desk> div:nth-child(1){
+        background-color: blue;
+        grid-area:img;
+    }
+
+    .articles-desk> div:nth-child(2){
+        background-color: #020113;
+        grid-area:box;
+        width: 290px;
+        box-sizing: border-box;
+        padding: 15px;
+    }
+
+    .articles-desk> div:nth-child(3){
+        grid-area:info;
+    }
+
+    .articles-desk> div:nth-child(4){
+        grid-area:fig;
+    }
+
+    .fundo-img{
+        background: url(../images/image-web-3-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+   
+    .box-blue-desk{
+        box-sizing: border-box;
+        padding: 5px;
+    }
+    
+    .box-blue-desk h2{
+        color: rgb(238, 191, 61);
+        font-size: 2em;
+    
+    }
+    
+    .box-blue-desk h3{
+        color: white;
+        font-size: 1.2em;
+        margin-bottom: 5px;
+        margin-top: 15px;
+    }
+    
+    .box-blue-desk hr{
+        margin-top: 15px;
+    }
+
+    .info-desk{
+        display: flex;
+    }
+
+    .items{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .items> h2{
+        font-size: 3.3vw;
+    }
+
+    .items> p{
+        flex-grow: 2;
+
+    }
+
+    .items> .button-pink{
+        align-self: flex-start;
+        flex-grow: 1;
+    }
+
+    .items:nth-of-type(1){
+        width: 50%;
+    }
+
+    .items:nth-of-type(2){
+        width: 70%;
+        text-align: justify;
+    }
+
+     button.button-pink{
+        background-color: rgb(255, 114, 121);
+        border: none;
+        padding: 15px 40px;
+        margin-top: 20px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-family:bold;
+        color: white;
+        text-align: center;
+    }
+
+    .fig{
+        display: flex;
+
+    }
+
+    .articles{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        margin-top: 30px;
+
+    }
+
+    .image{
+        height: 100%;
+        width: 30%;
+    }
+
+    .image> img{
+        max-width: 100%;
+        height: 100%;
+    }
+    
+    .information{
+        height: 100%;
+        width: 60%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 2;
+    }
+
+    .information h2{
+        flex-grow: 1;
+        color: #ccc;
+    }
+
+    .information h3{
+        flex-grow: 2;
+        font-size: 1em;
+
+    }
+
+    .information p{
+        font-size: 0.8em;
+    }
+
+    
 }
