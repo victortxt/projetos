@@ -1,0 +1,175 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header.header-mobile{
+    height: 220px;
+    background-image: url(../images/bg-main-mobile.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.front, .back{
+    width: 280px;
+    height: 100px;
+    position: absolute;
+    
+}
+
+.back{
+    background-color: black;
+    height: 160px;
+    border-radius: 10px;
+    right: 15px;
+    top: 30px;
+    background: url(../images/bg-card-back.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.front{
+    background-color: grey;
+    height: 160px;
+    border-radius: 10px;
+    transform: translateY(120px) translateX(15px);
+    background: url(../images/bg-card-front.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    box-sizing: border-box;
+    padding: 15px;
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.295);
+}
+
+img[src="images/card-logo.svg"]{
+    width: 50px;
+}
+
+.zeros-card{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 60px;
+    gap: 5px;
+}
+
+.zeros{
+    font-size: 1.3em;
+    align-self: flex-end;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.info-card{
+    display: flex;
+    justify-content: space-between;
+    height: 35px;
+}
+
+.info-card p{
+    align-self: flex-end;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.6em;
+}
+
+.zero-back{
+    width: 60px;
+    height: 89px;
+    display: flex;
+}
+
+.zero-back p{
+    align-self: flex-end;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+}
+
+.back{
+    display: flex;
+    justify-content: end;
+    align-items: flex-start;
+}
+
+.main-mobile{
+    margin-top: 80px;
+    padding: 25px;
+}
+
+.campos{
+    margin-bottom: 15px;
+}
+
+input{
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-weight: 500;
+    font-size: 1.3em;
+}
+
+input::placeholder{
+    color: #ccc;
+
+}
+
+.campos-flex{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 15px;
+}
+
+.formularios{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form{
+    width: 100%;
+    height: 100%;
+}
+
+.caixas{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding-right: 5px;
+}
+
+.caixas>input:nth-of-type(1){
+    width: 100%;
+}
+
+label{
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+
+}
+
+input[type="submit"]{
+    background-color: #21092F;
+    color: white;
+    height: 60px;
+    border-radius: 5px;
+    font-weight: normal;
+    margin-top: 15px;
+    font-size: 1.1em;
+}
+
+
