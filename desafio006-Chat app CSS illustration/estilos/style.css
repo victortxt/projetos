@@ -26,9 +26,9 @@ main{
 
 .phone{
     background-color: white;
-    width: 300px;
+    width: 340px;
     margin: 0 auto;
-    height: 85%;
+    height: 90%;
     border-radius: 40px;
     position: absolute;
     top: 50%;
@@ -281,6 +281,22 @@ main p{
 
 
 @media screen and (min-width: 1000px){
+    .phone{
+        background-color: white;
+        width: 300px;
+        margin: 0 auto;
+        height: 85%;
+        border-radius: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+        box-sizing: border-box;
+        padding: 15px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.329) ;
+    }
+
 main h1{
     font-size: 2em;
     color: rgb(93, 7, 143) ;
