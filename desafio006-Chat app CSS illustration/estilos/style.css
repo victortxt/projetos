@@ -1,0 +1,353 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+
+main{
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    height: 100%;
+    margin-bottom: 50px ;
+}
+
+
+.phone{
+    background-color: white;
+    width: 300px;
+    margin: 0 auto;
+    height: 85%;
+    border-radius: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.329) ;
+}
+
+.button-effect{
+    width: 50%;
+    margin: auto;
+    height: 35px;
+    background-color: white;
+    border-radius: 0px 0px 15px 15px;
+    position: absolute;
+    top: 0px;
+    left: 25%;
+}
+
+.fundo{
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    background-color: whitesmoke;
+    overflow: hidden;
+    height: 100%;
+}
+
+.header-app{
+    background: linear-gradient(to right, rgb(128, 8, 197),rgb(155, 2, 155),rgb(189, 5, 189) ) ;
+    padding:  35px 10px;
+    box-sizing: border-box;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    border-radius: 0px 0px 10px 10px ;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.212);
+}
+
+.avatar{
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    background-image: url(../images/avatar.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    align-self: flex-start;
+}
+
+.information{
+   color: white;
+   display: grid;
+   display: flex;
+   flex-direction: column;
+   align-self: flex-start;
+   padding-left: 5px;
+}
+
+.information h3{
+    font-size: 1em;
+    font-weight: 600;
+    align-self: flex-start;
+}
+
+.information p{
+    font-size: 0.6em;
+}
+
+.icon-maior{
+    color: white;
+    font-weight: 600;
+    transform: scaleY(250%);
+    align-self: flex-start;
+    margin-right: 10px;
+}
+
+.icon-option{
+    color: white;
+    display: flex;
+    align-self: flex-end;
+}
+
+.icon-color-white{
+    color: white;
+}
+
+.mensagens{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.mymessagens{
+    background-color: #ccc;
+    padding: 7px;
+    color: purple;
+    width: 140px;
+    margin-bottom: 10px;
+
+    font-size: 0.6em;
+    border-radius: 10px 10px 10px 0px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.473);
+    align-self: flex-start;
+}
+
+.mymessagens p{
+    line-height: 14.4px;
+}
+
+.imgs-phones{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-template-rows: 60px;
+    width: 70%;
+    margin-left: 60px;
+}
+
+.dogs{
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.dogs> img{
+    width: 100%;
+    height: 100%;
+}
+
+.othermessagens{
+    background-color: white;
+    padding: 5px 10px;
+    margin-right: 20px;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-self: flex-end;
+    width: 140px;
+    font-size: 0.6em;
+    border-radius: 10px 10px 0px 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.473);
+}
+
+.msgcurta{
+    width: 100px;
+    margin-left: 130px;
+}
+
+.audio{
+    background: linear-gradient(to right, rgb(155, 2, 155),rgb(189, 5, 189),rgb(128, 8, 197) ) ;
+    width: 200px;
+    height: 40px;
+    margin-bottom: 5px;
+    border-radius: 10px 10px 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.audio p{
+    font-size: 0.6em;
+    color: white;
+    flex-grow: 2;
+    margin-left: 10px;
+}
+
+.audio h3{
+    color: white;
+}
+
+.fig-design{
+    height: 20px;
+    width: 20px;
+    border: 2px solid white;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.campo{
+    width: 80%;
+    margin: 0 auto;
+    height: 40px;
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 25px;
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.campo > p{
+    align-self: center;
+    padding-left: 10px;
+    color: #ccc;
+}
+
+.style-icon-msg{
+    background: linear-gradient(to right, rgb(155, 2, 155),rgb(189, 5, 189),rgb(128, 8, 197) ) ;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    align-self: center;
+    position: relative;
+}
+
+.style-icon-msg::before{
+    content: '>';
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.7em;
+}
+
+.figure{
+    position: absolute;
+    width: 60%;
+    height: 600px;
+    background: linear-gradient(to bottom, rgb(155, 2, 155),rgb(189, 5, 189),rgb(128, 8, 197) ) ;
+    border-radius: 0px 0px 100% 0px;
+}
+
+main h1{
+    font-size: 2em;
+    color: rgb(93, 7, 143) ;
+    margin-bottom: 10px;
+}
+
+main p{
+    color: rgba(160, 160, 160, 0.8);
+}
+
+
+
+@media screen and (min-width: 1000px){
+main h1{
+    font-size: 2em;
+    color: rgb(93, 7, 143) ;
+    margin-bottom: 10px;
+}
+
+main p{
+    color: rgb(160, 160, 160);
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 700px;
+}
+
+.container> main{
+    align-self: center;
+    display: flex;
+}
+
+.content-informtion{
+    width: 420px;
+    align-self: center;
+    text-align: left;
+}
+
+.content-informtion h1{
+    font-size: 2.5em;
+}
+
+.content-informtion p{
+    line-height: 25px;
+}
+
+.white-fig{
+    background-color: rgba(204, 204, 204, 0.103);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 350px;
+    height: 700px;
+    border-radius: 70%  0px 0px 0px;
+}
+
+.phone{
+    background-color: white;
+    width: 300px;
+    margin: 0 auto;
+    height: 85%;
+    border-radius: 40px;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.329) ;
+}
+
+.figure{
+    position: absolute;
+    width: 70%;
+    height: 700px;
+    background: linear-gradient(to bottom, rgb(155, 2, 155),rgb(189, 5, 189),rgb(128, 8, 197) ) ;
+    border-radius: 0px 0px 50% 50%;
+}
+
+}
