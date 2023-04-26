@@ -1,0 +1,100 @@
+body{
+    background-image: linear-gradient();
+}
+
+body{
+    background-image: linear-gradient(120deg, rgb(128, 25, 25), rgb(219, 100, 45));
+}
+
+#container{
+    background-color: #1c1c1c;
+    box-sizing: border-box;
+    padding: 50px;
+    width: 80vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px black;
+
+}
+
+#container input{
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+    box-sizing: border-box;
+    padding: 15px;
+    transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+    border: none;
+    cursor: pointer;
+}
+
+#container input:hover{
+    transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+    background-color: rgb(128, 25, 25);
+    outline: 2px solid rgb(219, 100, 45);
+}
+
+
+
+label{
+    color: white;
+}
+
+.campos{
+    width: 100%;
+    margin: 10px;
+}
+
+.campos:nth-child(2){
+    width: 100%;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.button-container{
+    width: 100%;
+    margin: 10px;
+}
+
+.button-container> button{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background-color: green;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+button:hover{
+    background-color: white;
+    color: green;
+    transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@media screen and (min-width: 1050px){
+    
+
+    .campos{
+        width: 150%;
+    }
+    
+    .campos:nth-child(2){
+        width: 50%;
+    }
+    
+    .flex{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+}
+
