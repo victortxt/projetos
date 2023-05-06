@@ -85,46 +85,40 @@ BtnAdicionar.addEventListener("click", () =>{
 
         edit.addEventListener('click', (event) => {
             const editContainer = document.querySelector('#edit-container')
-
+          
             let content = event.target.parentNode
             let txtSection = content.previousElementSibling
-            let h3Element = txtSection.querySelector('h3');
-            console.log(h3Element)
-
-                editContainer.style.display = 'block'
-                container.style.display = 'none'
-
-
-                let output = document.querySelector('#output')
+            let h3Element = txtSection.querySelector('h3')
+          
+            editContainer.style.display = 'block'
+            container.style.display = 'none'
+          
+            let output = document.querySelector('#output')
             output.innerHTML = h3Element.textContent
-            
-
+          
             const alterar = document.querySelector('#alterar')
-
-            alterar.addEventListener('click', () =>{
-                let inputAlterar = document.querySelector('#alteração-tarefa').value
-                h3Element.innerHTML = inputAlterar
-                editContainer.style.display = 'none'
-                container.style.display = 'block'
-            })
-
-            //backpage
-
-            backpage = document.querySelector('#backpage')
-
+            let handleAlterar = null
+          
+            handleAlterar = () => {
+              let inputAlterar = document.querySelector('#alteração-tarefa').value
+              h3Element.innerHTML = inputAlterar
+              editContainer.style.display = 'none'
+              container.style.display = 'block'
+              alterar.removeEventListener('click', handleAlterar)
+            }
+          
+            alterar.addEventListener('click', handleAlterar)
+          
+            // backpage
+            let backpage = document.querySelector('#backpage')
+          
             backpage.addEventListener('click', () =>{
-                editContainer.style.display = 'none'
-                container.style.display = 'block'
+              editContainer.style.display = 'none'
+              container.style.display = 'block'
+              alterar.removeEventListener('click', handleAlterar)
             })
-
-            
-            
-
-            //adicionar a sessao de edição
-            //editar valor
-            // mudar funções de botões
-            //title.innerHTML = inputTarefas.value
-        })
+          })
+          
     }
 
     console.log(container)
