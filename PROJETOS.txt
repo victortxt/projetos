@@ -1,0 +1,17 @@
+PROJETOS
+
+1 - Pagina landing page | https://youtu.be/69-WfrVBli8
+2 - Pagina landing page | https://youtu.be/1wfeqDyMUx4
+3 - Pagina landing page | https://youtu.be/YfmYUtGOaTg
+
+1 - Listar Tarefas | Feito (REVISAR)
+2 - Criar um DashBoard
+
+1 - projeto chamando API | https://youtu.be/VS8EBgPwsSU
+-------------------------------------------------------
+LINHA DE APRENDIZADO:
+- HTML - CSS | FEITO
+- JS | APERFEIÇOAR ------------ ESTOU AQUI!
+- GIT & GITHUB | APERFEIÇOAR ------------ ESTOU AQUI!
+- REACT | APRENDER
+- INTRODUZIR BANCO DE DADOS !!!
