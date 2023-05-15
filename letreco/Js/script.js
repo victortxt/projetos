@@ -28,20 +28,20 @@ btnBackGame1.addEventListener('click', () => {
 */
 
 //
-textInput.forEach(() => {
-    addEventListener('keypress', (e) => {
-        if(e.target.value.length > 0){
-            e.target.value = ''
-        }
-    }) 
-});
+textInput.forEach((input) => {
+    input.addEventListener('keypress', (e) => {
+      if (e.target.value.length > 0) {
+        e.target.value = '';
+      }
+    });
+  });
 
 let indicePalavra = 0
 
 const randomizarPalavraChave = () => {
     if(indicePalavra === 0){
     indicePalavra++
-    let random = Math.floor(Math.random() * 10)
+    let random = Math.floor(Math.random() * 23)
     switch(random){
         case 0:
             return 'casas'
@@ -65,6 +65,33 @@ const randomizarPalavraChave = () => {
             return 'morte'
         case 10:
             return 'forte'
+        case 11:
+            return 'corre'
+        case 12:
+            return 'goste'
+        case 13: 
+            return 'janta'
+        case 14:
+            return 'porte'
+        case 15: 
+            return 'mouse'
+        case 16:
+            return 'html;'
+        case 17:
+            return 'perna'
+        case 18:
+            return 'bravo'
+        case 19:
+            return 'fabio'
+        case 20:
+            return 'manco'
+        case 21: 
+            return 'casal'
+        case 22:
+            return 'nação'
+        case 23:
+            return 'cinco'
+            
         }
     }
 }
@@ -110,7 +137,7 @@ submit.addEventListener('click', () => {
     })
 
     let winner = Array()
-
+    // | erros
 
     if(chances > 0){
         output.innerHTML = chances
@@ -120,6 +147,7 @@ submit.addEventListener('click', () => {
             if((respostaInput[i].toLowerCase()) === palavraChave()[i]){
                 document.querySelector('#opt' + i).style.backgroundColor = 'green';
                 document.querySelector('#opt' + i).style.color = 'white';
+                document.querySelector('#correct').innerHTML += respostaInput[i] + ' | ' 
                 winner.push(respostaInput[i])
                 console.log(winner)
                 if(winner.length === 5){
@@ -138,6 +166,9 @@ submit.addEventListener('click', () => {
                 document.querySelector('#opt' + i).style.backgroundColor = 'red';
 
                 document.querySelector('#opt' + i).style.color = 'white';
+
+               document.querySelector('#erros').innerHTML +=  respostaInput[i] + ' | ' 
+
             }
     }
         }else if(chances === 0){

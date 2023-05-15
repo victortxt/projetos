@@ -156,3 +156,24 @@ input{
 }
 
 
+#letters{
+    box-sizing: border-box;
+    padding: 10px;
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.bloco{
+    height: 100%;
+    margin-right: 10px;
+    background-color: green;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+    font-weight: bold;
+    color: white;
+}
