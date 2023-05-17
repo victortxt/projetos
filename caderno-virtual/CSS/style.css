@@ -130,11 +130,12 @@ button{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.606); 
     width: 90%;
     margin: 15px;
-    height: 500px;
     display: none;
     flex-direction: column;
     box-sizing: border-box;
     padding: 20px;
+    background-color: #1c1c1c;
+    color: white;
 }
 
 .campos{
@@ -149,6 +150,20 @@ button{
     margin-bottom: 25px;
     background-color: #1c1c1c;
     color: white;
+}
+
+.close{
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputConsulta{
+    background-image: linear-gradient(120deg, rgb(28, 86, 220), rgb(0, 83, 192));
+    padding: 10px;
+    font-size: 1em;
+    box-sizing: border-box;
+    color: white;
+    border: 0px;
 }
 
 @media screen and (min-width: 700px){
