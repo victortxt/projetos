@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/script.js" defer></script>
+    <title>Caderno Virtual</title>
+</head>
+<body>
+    <header>
+        <h1>Caderno virtual</h1>
+    </header>
+    <main>
+        <section id="container">
+            <section class="content" id="elements">
+            </section>
+
+            <section class="content" id="container-text">
+                    <label for="titleText">Título: </label>
+                    <input type="text" id="titleText">
+
+                    <label for="textareaText">Insira o texto: </label>
+                    <textarea name="" id="textareaText" cols="30" rows="10"></textarea>
+                    <button id="salvar" class="btnDefault">Salvar</button>
+            </section>
+            <div id="acess-container">
+                <div class="close">
+                    <button id="close">X</button>
+                </div>
+                <div class="campos">
+                    <label for="itxtAcess">Mudar o título</label>
+                    <input type="text" name="" id="itxtAcess">
+                </div>
+                <div class="campos">
+                    <label for="iAreaTxtAcess">Mudar o texto</label>
+                    <textarea name="" id="iAreaTxtAcess" cols="30" rows="10"></textarea>
+                </div>      
+                <div class="campos">
+                    <button id="edit">Mudar</button>
+                </div>           
+            </div>
+        </section>
+    </main>
+</body>
+</html>

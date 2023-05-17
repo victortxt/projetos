@@ -1,0 +1,182 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header{
+    background-color: rgb(127, 87, 14);
+    color: white;
+    font-weight: bold;
+
+    box-sizing: border-box;
+    padding: 5px;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+#container{
+    width: 100%;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.664);
+    background-color: white;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#elements{
+    width: 100%;
+    height: 250px;
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+}
+
+#textareaText, #titleText{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #ccc;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 1.5em;
+}
+
+#titleText{
+    height: 100px;
+    margin-bottom: 15px;
+    border: none;
+    background-color: rgb(127, 87, 14);
+    color: white;
+}
+
+.card{
+    width: 200px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.66);
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+button{
+    height: 30px;
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btnDefault{
+    background-color: white;
+    color: rgb(0, 0, 225);
+    border: 2px solid rgb(0, 0, 225);
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+}
+
+.btnDanger{
+    background-color: rgb(202, 0, 0);
+    color: white;
+    border: 2px solid darkred;
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+}
+
+.btnDefault:hover,.btnDefault:active{
+    background-color: rgb(0, 0, 225);
+    color: white;
+    border: 2px solid rgb(0, 0, 225);
+}
+
+.btnDanger:hover, .btnDanger:active{
+    background-color: white;
+    color: rgb(202, 0, 0);
+    border: 2px solid darkred;
+}
+
+.description{
+    width: 150px;
+    overflow: hidden;
+}
+
+#acess-container{
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.606); 
+    width: 90%;
+    margin: 15px;
+    height: 500px;
+    display: none;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.campos{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+#close{
+    width: 20px;
+    margin-bottom: 25px;
+    background-color: #1c1c1c;
+    color: white;
+}
+
+@media screen and (min-width: 700px){
+
+    #container{
+        width: 100%;
+        padding: 15px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        height: 100vh;
+    }
+
+    #elements{
+        width: 50%;
+        height: 100%;
+        overflow-y: scroll;
+        overflow-x: auto;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+    }
+
+    .card{
+        height: 200px;
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+}
