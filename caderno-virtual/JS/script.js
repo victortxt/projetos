@@ -98,6 +98,7 @@ salvar.addEventListener('click', () => {
     
         btnExcluir.addEventListener('click', (e) => {
             e.target.parentNode.remove();
+            messageDefault();
         })
 
         title.value = ''
