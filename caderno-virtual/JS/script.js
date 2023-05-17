@@ -27,10 +27,20 @@ edit
 */
 
 let i = 0
+//cardElements
 
+const messageDefault = () => {
+    console.log(cardElements.childElementCount)
+    if(cardElements.childElementCount === 1){
+        document.querySelector('#mensagem-default').style.display = 'flex'
+    }else{
+        document.querySelector('#mensagem-default').style.display = 'none'
+    }
+}
+
+addEventListener('load', messageDefault)
 
 salvar.addEventListener('click', () => {
-
     if(!(title.value === "" && text.value === "")){
         i++
         let divCard = document.createElement('div')
@@ -92,6 +102,7 @@ salvar.addEventListener('click', () => {
 
         title.value = ''
         text.value = ''
+        messageDefault();
     }else{
         alert('ERRO')
     }

@@ -166,6 +166,26 @@ button{
     border: 0px;
 }
 
+#mensagem-default {
+    width: 200px;
+    height: 100%;
+    background-color: #1c1c1c;
+    color: white;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+#mensagem-default > span {
+    background-color: #484848;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
 @media screen and (min-width: 700px){
 
     #container{
@@ -195,4 +215,13 @@ button{
         margin-right: 0px;
         margin-bottom: 20px;
     }
+
+    #mensagem-default {
+        width: 100%;
+        height: 120px;
+        box-sizing: border-box;
+        background-color: #1c1c1c;
+        color: white;
+    }
+    
 }
