@@ -41,7 +41,7 @@ let indicePalavra = 0
 const randomizarPalavraChave = () => {
     if(indicePalavra === 0){
     indicePalavra++
-    let arrayLetras = ['falar', 'bravo', 'chave', 'grito', 'sonho', 'lindo', 'praia', 'risco', 'festa', 'beijo', 'suave', 'fugir', 'amigo', 'luxo', 'quest', 'ágil', 'nobre', 'laran', 'músic', 'paz', 'leite', 'água', 'corpo', 'flor', 'amor', 'verde', 'laranja', 'feliz', 'quero', 'viver', 'sonho', 'poder', 'azul', 'dizer', 'pedra', 'falar', 'feliz', 'corre', 'risos', 'pazia', 'laran', 'maçã', 'canta', 'beber', 'acord', 'rosas', 'campo', 'força', 'lutar', 'sabor', 'família', 'brinc', 'camin', 'sonho', 'felic', 'rindo', 'cores', 'café', 'brisa', 'balão', 'praia', 'mente', 'hoje', 'amanh', 'músic', 'corre', 'laran', 'melão', 'festa', 'quero', 'feliz', 'chuva', 'nuvens', 'amigo', 'risco', 'flora', 'corpo', 'dança', 'grito', 'bravo', 'flores', 'água', 'salto', 'pular', 'fogue', 'azule', 'terra', 'maria', 'praça', 'amora', 'torta', 'risco', 'texto', 'poema', 'tinta', 'tecla', 'camin', 'abrir', 'olhos'];
+    let arrayLetras = ['falar', 'bravo', 'chave', 'grito', 'sonho', 'lindo', 'praia', 'risco', 'festa', 'beijo', 'suave', 'fugir', 'amigo', 'luxos', 'nobre', 'leite', 'corpo', 'verde', 'feliz', 'quero', 'viver', 'poder', 'dizer', 'pedra', 'correr', 'risos', 'maçãs', 'canta', 'beber', 'poste', 'rosas', 'campo', 'força', 'lutar', 'sabor', 'rindo', 'cores', 'cafés', 'brisa', 'balão', 'mente', 'melão', 'chuva', 'nuvem', 'salto', 'pular', 'fogue', 'azule', 'terras', 'praça', 'amora', 'torta', 'texto', 'poema', 'tinta', 'tecla', 'abrir', 'olhos'];
     let random = Math.floor(Math.random() * arrayLetras.length)
     return arrayLetras[random]
 }
