@@ -41,59 +41,10 @@ let indicePalavra = 0
 const randomizarPalavraChave = () => {
     if(indicePalavra === 0){
     indicePalavra++
-    let random = Math.floor(Math.random() * 23)
-    switch(random){
-        case 0:
-            return 'casas'
-        case 1: 
-            return 'carros'
-        case 2:
-            return 'patos'
-        case 3: 
-            return 'cacos'
-        case 4:
-            return 'matos'
-        case 5:
-            return 'costa'
-        case 6:
-            return 'casca'
-        case 7:
-            return 'pasta'
-        case 8:
-            return 'marca'
-        case 9: 
-            return 'morte'
-        case 10:
-            return 'forte'
-        case 11:
-            return 'corre'
-        case 12:
-            return 'goste'
-        case 13: 
-            return 'janta'
-        case 14:
-            return 'porte'
-        case 15: 
-            return 'mouse'
-        case 16:
-            return 'html;'
-        case 17:
-            return 'perna'
-        case 18:
-            return 'bravo'
-        case 19:
-            return 'fabio'
-        case 20:
-            return 'manco'
-        case 21: 
-            return 'casal'
-        case 22:
-            return 'nação'
-        case 23:
-            return 'cinco'
-            
-        }
-    }
+    let arrayLetras = ['casas'];
+    let random = Math.floor(Math.random() * arrayLetras.length)
+    return arrayLetras[random]
+}
 }
 
 let palavraEscolhida = randomizarPalavraChave()
@@ -139,7 +90,7 @@ submit.addEventListener('click', () => {
     let winner = Array()
     // | erros
 
-    if(chances > 0){
+    if(chances > -1){
         output.innerHTML = chances
         chances--
         for(let i = 0; i < respostaInput.length; i++){
@@ -170,16 +121,27 @@ submit.addEventListener('click', () => {
                document.querySelector('#erros').innerHTML +=  respostaInput[i] + ' | ' 
 
             }
-    }
-        }else if(chances === 0){
-
-            document.querySelector('#loser').style.display = 'block'
-
-            document.querySelector('#palavraEscolhida').innerHTML = palavraEscolhida
-                
-            document.querySelector('#container').style.display = 'none'
-
+            
         }
 
-            respostaInput = []
+        }
+        
+        if(chances === -1){
+            if(winner.length === 5){
+                setTimeout(() => {
+                    document.querySelector('#winner').style.display = 'block'
+                    document.querySelector('#container').style.display = 'none'
+                }, 1000);
+            }else{
+                document.querySelector('#loser').style.display = 'block'
+
+                    document.querySelector('#palavraEscolhida').innerHTML = palavraEscolhida
+                        
+                    document.querySelector('#container').style.display = 'none'
+            }
+            }
+
+                respostaInput = []
         })
+
+            
