@@ -44,8 +44,6 @@ header> div:nth-of-type(7){
     color: greenyellow;
 }
 
-
-
 #container{
     display: flex;
     flex-direction: column;
@@ -143,14 +141,11 @@ input{
 }
 
 #rodape{
-    position: fixed;
     width: 100%;
     box-sizing: border-box;
     padding: 5px;
-    font-size: 1.5em;
+    font-size: 1em;
     text-align: center;
-    bottom: 0;
-    left: 0;
     background-color: #ccc;
     border-top: 3px solid black;
 }
@@ -164,6 +159,7 @@ input{
     display: flex;
     flex-direction: row;
     align-items: center;
+    border-bottom: 2px solid black;
 }
 
 .bloco{
@@ -176,4 +172,14 @@ input{
     margin: 10px;
     font-weight: bold;
     color: white;
+}
+
+#content-explicate{
+    background-color: #ccc;
+    color: blue;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }

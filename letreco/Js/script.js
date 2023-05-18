@@ -113,6 +113,8 @@ submit.addEventListener('click', () => {
 
                 document.querySelector('#opt' + i).style.color = 'white'
 
+                document.querySelector('#incluso').innerHTML = respostaInput[i];
+
             }else{
                 document.querySelector('#opt' + i).style.backgroundColor = 'red';
 
