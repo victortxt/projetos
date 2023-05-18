@@ -105,6 +105,8 @@ submit.addEventListener('click', () => {
                     setTimeout(() => {
                         document.querySelector('#winner').style.display = 'block'
                         document.querySelector('#container').style.display = 'none'
+                        document.querySelector('#content-explicate').style.display = 'none'
+
                     }, 1000);
                 } 
                 
@@ -113,7 +115,7 @@ submit.addEventListener('click', () => {
 
                 document.querySelector('#opt' + i).style.color = 'white'
 
-                document.querySelector('#incluso').innerHTML += respostaInput[i];
+                document.querySelector('#incluso').innerHTML += respostaInput[i] + ' | ' 
 
             }else{
                 document.querySelector('#opt' + i).style.backgroundColor = 'red';
@@ -140,6 +142,7 @@ submit.addEventListener('click', () => {
                     document.querySelector('#palavraEscolhida').innerHTML = palavraEscolhida
                         
                     document.querySelector('#container').style.display = 'none'
+                    document.querySelector('#content-explicate').style.display = 'none'
             }
             }
 
