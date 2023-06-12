@@ -3,6 +3,8 @@ container
 container-edit
 */
 
+alert('teste')
+
 const tareta = document.querySelector('#tarefa');
 const btnSubmit = document.querySelector('#submit');
 const output = document.querySelector('#output');
