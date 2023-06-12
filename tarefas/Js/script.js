@@ -1,137 +1,185 @@
-const BtnAdicionar = document.querySelector('#adicionar');
-const inputTarefas = document.querySelector('#itarefas');
-const container = document.querySelector('#container-element')
-let numFilhos = container.childElementCount;
+/*
+container
+container-edit
+*/
+
+const tareta = document.querySelector('#tarefa');
+const btnSubmit = document.querySelector('#submit');
+const output = document.querySelector('#output');
+const messageDefault = document.querySelector('#cardMessageDefault')
+
+const editSub = document.querySelector('#editSub');
+const input_edit = document.querySelector('#edit-tarefa');
+
+const container = document.querySelector('#container')
+const container_edit = document.querySelector('#container-edit')
 
 
 
+const mensagemDefault = () => {
+    if(document.querySelectorAll('#output div').length == 1 || document.querySelectorAll('#output div').length == 0){
+        messageDefault.className = 'messageDefault'
+        messageDefault.style.display = 'block'
+    }else{
+        messageDefault.className = 'nonemessageDefault'
 
-indiceID = 0
+        setTimeout(() => {
+            messageDefault.style.display = 'none'
+        }, 1000)
+    }
+}
+
+addEventListener('load', () => {
+    mensagemDefault();
+})
+
+let arrayTitle = []
+
+btnSubmit.addEventListener('click', () => {
+
+    if(tareta.value === ""){
+        alert('ERRO: preencha os dados corretamente !');
+    }else{
+        let card = document.createElement('div');
+        card.className = 'createDiv';
+        output.appendChild(card)
+
+        let title = document.createElement('h2');
+        title.innerHTML = tarefa.value
+        title.className = 'createTitle';
+        card.appendChild(title)
+
+        arrayTitle.push(title.textContent)
+
+        let sessaoBtn = document.createElement('section');
+        sessaoBtn.className = 'createBtn';
+        card.appendChild(sessaoBtn);
+
+        let BtnOk = document.createElement('button');
+        BtnOk.id = 'btnOk'
+        BtnOk.textContent = 'ok'
+        sessaoBtn.appendChild(BtnOk);
+        let i = 0;
 
 
-BtnAdicionar.addEventListener("click", () =>{
-
-    if(!(inputTarefas.value === "")){
-        indiceID++
-        numFilhos++
-        mensagemUndefined(true)
-        
-        let nullMessage = document.querySelector('#content-message')
-        if(nullMessage){
-            nullMessage.remove()
-        }
-
-        
-        //--
-        console.log(numFilhos)
-        //--
-        let elemento = document.createElement('div')
-        elemento.id = 'item' + indiceID
-        console.log(elemento.id)
-        elemento.className = 'elemento';
-        container.appendChild(elemento)
-        //----
-        let texto = document.createElement('div')
-        texto.className = 'text'
-        elemento.appendChild(texto)
-
-        let title = document.createElement('h3')
-        title.id = 'txtID'
-        title.innerHTML = inputTarefas.value
-        texto.appendChild(title)
-        //---
-        let content = document.createElement('div')
-        content.className = 'contents'
-        elemento.appendChild(content)
-        //---
-        // btn - id
-        let done = document.createElement('button');
-        let remove = document.createElement('button');
-        let edit = document.createElement('button');
-        done.textContent = 'OK'
-        remove.textContent = 'X'
-        edit.textContent = 'Edit'
-
-        console.log(done)
-
-        content.appendChild(done)
-        content.appendChild(remove)
-        content.appendChild(edit)
-
-        let i = 0
-        done.addEventListener('click', () => {
-            const divBtn = done.parentNode
-            const line = divBtn.parentNode
+        BtnOk.addEventListener('click', (e) => {
+            let sessao = e.target.parentNode
+            let container = sessao.parentNode
             if(i === 0){
-                line.className = 'done-line'
                 i++
+                container.className = 'cardOK'
             }else{
-                console.log(`negativo: ${i}`)
                 i--
-                line.className = 'elemento'
-            }
-        })
-
-        remove.addEventListener('click', () => {
-            const divBtn = done.parentNode
-            const line = divBtn.parentNode
-            line.remove()
-            numFilhos--
-            if(numFilhos === 0){
-                mensagemUndefined(false)
+                container.className = 'createDiv'
             }
             
         })
 
-        edit.addEventListener('click', (event) => {
-            const editContainer = document.querySelector('#edit-container')
-          
-            let content = event.target.parentNode
-            let txtSection = content.previousElementSibling
-            let h3Element = txtSection.querySelector('h3')
-          
-            editContainer.style.display = 'block'
-            container.style.display = 'none'
-          
-            let output = document.querySelector('#output')
-            output.innerHTML = h3Element.textContent
-          
-            const alterar = document.querySelector('#alterar')
-            let handleAlterar = null
-          
-            handleAlterar = () => {
-              let inputAlterar = document.querySelector('#alteração-tarefa').value
-              h3Element.innerHTML = inputAlterar
-              editContainer.style.display = 'none'
-              container.style.display = 'block'
-              alterar.removeEventListener('click', handleAlterar)
-            }
-          
-            alterar.addEventListener('click', handleAlterar)
-          
-            // backpage
-            let backpage = document.querySelector('#backpage')
-          
-            backpage.addEventListener('click', () =>{
-              editContainer.style.display = 'none'
-              container.style.display = 'block'
-              alterar.removeEventListener('click', handleAlterar)
-            })
-          })
-          
-    }
 
-    console.log(container)
+        //--------------------------------
+
+        let BtnX = document.createElement('button');
+        BtnX.id = 'btnX'
+        BtnX.textContent = 'X';
+        sessaoBtn.appendChild(BtnX);
+
+        BtnX.addEventListener('click', (e) => {
+            let sessao = e.target.parentNode
+            let container = sessao.parentNode
+            container.className = 'Xcard'
+            setTimeout(() => {
+                container.remove()
+                mensagemDefault();
+
+            }, 1500)
+
+        })
+
+        // | editSub
+
+
+        let BtnEdit = document.createElement('button');
+        BtnEdit.id = 'btnEdit'
+        BtnEdit.textContent = 'Edit';
+        sessaoBtn.appendChild(BtnEdit);
+
+
+
+        const handleEdit = () => {
+            let edit = e.target.parentNode;
+            let card = edit.parentNode;
+            let h2 = card.querySelector('h2');
+            h2.textContent = input_edit.value;
+        }
+        
+        const FuncEdit = (e) => {
+            const edit = e.target.parentNode;
+            const card = edit.parentNode;
+            const h2 = card.querySelector('h2');
+        
+            const handleEdit = () => {
+                h2.textContent = input_edit.value;
+            };
+        
+            const handleEditSubClick = () => {
+                container.className = 'container-edit-block'
+
+                container_edit.style.display = 'none'
+                container.style.display = 'block'
+                
+                handleEdit();
+                editSub.removeEventListener('click', handleEditSubClick);
+            };
+
+            editSub.addEventListener('click', handleEditSubClick);
+            
+            container.className = 'container-none'
+            container_edit.className = 'container-edit-block'
+        
+            setTimeout(() => {
+                container.style.display = 'none'
+                container_edit.style.display = 'block'
+            }, 1000);
+            
+            BtnEdit.removeEventListener('click', handleEditSubClick);
+        };
+        
+        BtnEdit.addEventListener('click', FuncEdit);
+    }
+    mensagemDefault();
 })
 
-const mensagemUndefined = (f) => {
 
-        console.log(numFilhos, f)
-        if(numFilhos === f || numFilhos === 0){
-            let message = document.createElement('div')
-            container.style.display = 'block'
-            message.id = 'content-message'
-            message.textContent = 'Nenhuma tarefa foi encontrada :/'
-            container.appendChild(message)
+let input_filtro = document.querySelector('#input-filtro');
+
+input_filtro.addEventListener('keyup', () => {
+    let filtro = arrayTitle.filter((element) => {
+        for (let i = 0; i < element.length; i++) {
+            if (element[i].indexOf(input_filtro.value) !== -1) {
+                return true; // O elemento deve ser incluído no novo array filtrado
+            }
         }
-}
+        return false; // O elemento não atende ao critério de filtragem
+    });
+
+    console.log(filtro);
+
+    let h2 = output.querySelectorAll('div h2')
+
+    
+
+    h2.forEach(element => {
+        let text = element.textContent
+            if(input_filtro.value === text){
+                element.parentNode.style.display = 'block'
+            }else if(input_filtro.value === ""){
+                element.parentNode.style.display = 'block'
+            }else{
+                element.parentNode.style.display = 'none'
+            }
+    });
+});
+
+
+
+
