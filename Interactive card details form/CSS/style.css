@@ -119,6 +119,8 @@ button:hover{
 
 #cvc{
     width: 170%;
+    display: flex;
+    flex-direction: column;
     margin-left: 10px;
 }
 
@@ -134,19 +136,6 @@ img[src="images/icon-complete.svg"]{
     justify-content: center;
     width: 80%;
     animation: anima .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-}
-
-#erro{
-    background-color: #ccc;
-    width: 80%;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    padding: 10px;
-    box-sizing: border-box;
-    font-weight: bold;
-    color: red;
-    animation: anima 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    display: none;
 }
 
 @keyframes anima {

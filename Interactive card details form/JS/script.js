@@ -15,9 +15,8 @@ submitBtn.addEventListener('click', () => {
     }
 
     if (isEmpty) {
-        document.querySelector('#erro').style.display = 'block'
+        alert('ERRO: preencha todos os dados corretamente !')
     } else {
-        document.querySelector('#erro').style.display = 'none'
         inputs.forEach(element => {
             element.value = ''
         })
