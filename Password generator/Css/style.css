@@ -37,8 +37,7 @@ body{
     background-color: transparent;
     color: rgb(56, 56, 56);
     text-align: center;
-    width: 200px;
-    background-color: red;
+    
 }
 
 .row{
@@ -138,3 +137,14 @@ input[type="range"]{
     height: 50px;
 }
 
+#output{
+    width: 200px;
+    overflow-x: auto;
+}
+
+@media screen and (min-width: 500px) {
+    #output {
+        width: 100%;
+        overflow: none;
+    }
+}
