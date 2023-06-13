@@ -83,6 +83,7 @@ src="images/bg-card-front.png"
 
 .row{
     display: flex;
+    align-items: center;
 }
 
 input{
