@@ -43,6 +43,7 @@ src="images/bg-card-front.png"
 
 #container-form{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
