@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/script.js" defer></script>
+    <title>Formulario</title>
+</head>
+<body>
+    <main>
+        <section id="bg">
+            <img src="images/bg-card-back.png" alt="">
+            <img src="images/bg-card-front.png" alt="">
+        </section>
+        <section id="container-form">
+            <div id="erro">
+                Preencha todos os campos corretamente
+            </div>
+            <section id="form">
+                <div class="campos">
+                    <label for="iname">carholder name</label>
+                    <input type="text" name="" id="iname" placeholder="e.g. Jane Appleseed">
+                </div>
+                <div class="campos">
+                    <label for="icard">card number</label>
+                    <input type="number" name="" id="icard" placeholder="e.g. 1234 5678 9123 0000">
+                </div>
+
+                <div class="row">
+
+                <div class="campos">
+                    <label for="date">exp. Date (mm/yy)</label>
+                        <div class="row">
+                            <input style="margin-right: 10px;" type="number" name="" id="date" placeholder="MM">
+                            <input type="number" name="" id="date" placeholder="YY">
+                        </div>
+                </div>
+
+                <div id="cvc" class="campos">
+                    <label for="icvc">cvc</label> 
+                    <input type="number" name="" id="icvc" placeholder="e.g. 123">
+                </div>
+            </div>
+
+            <div class="campos">
+                <button id='submit'>Confirm</button>
+            </div>
+        </section>
+        <section id="sucess">     
+            <div class="campos">
+                <img src="images/icon-complete.svg" alt="">
+                <p>We´ve added your card details</p>
+                <button id="continue">Continue</button>
+            </div>
+        </section>
+    </main>
+
+   
+    
+</body>
+</html>
