@@ -11,7 +11,7 @@ const output = document.querySelector('#output')
 
 
 
-comprimentoSenha.addEventListener('click', () => {
+comprimentoSenha.addEventListener('input', () => {
     valueComprimento.innerHTML = comprimentoSenha.value
 })
 
