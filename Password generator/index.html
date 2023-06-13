@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/style.css">
+    <script src="Js/script.js" defer></script>
+    <title>Gerador de senha</title>
+</head>
+<body>
+    <section id="container">
+        <div id="title">
+            <h3>Password Generator</h3>
+        </div>
+        <section class="content">
+            
+            <div class="row space contentFirst">
+                <h2 id="output">Senha</h2>
+                <button id="copy">Copiar</button>
+            </div>  
+        </section>
+        <section class="content">
+            <div class="row campos space">
+                <p>Character Length</p>
+                <span id='outputValue'>13</span>
+            </div>
+
+            <div class="campos">
+                <input type="range" name="" id="lengthSenha" min="5" max="20">
+            </div>
+
+            <div class="campos container-opt">
+                <div class="opt">
+                    <input class="option" type="checkbox" name="" id="iUp">
+                    <label for="iUp">include Uppercase letters</label>
+                </div>
+                
+                <div class="opt">
+                    <input class="option" type="checkbox" name="" id="iLow">
+                    <label for="iLow">include Lowercase letters</label>
+                </div>
+                
+                <div class="opt">
+                    <input class="option" type="checkbox" name="" id="iNum">
+                    <label for="iNum">Include Numbers</label>
+                </div>
+                
+                <div class="opt">
+                    <input class="option" type="checkbox" name="" id="Isimbol">
+                    <label for="Isimbol">Include simbols</label>
+                </div>
+            </div>
+
+            <div class="strength row campos space">
+               <h2 id="output-seguranca">strength</h2>
+               <div class="row space levels">
+                    <div class="level">
+
+                    </div>
+                    <div class="level">
+
+                    </div>
+                    <div class="level">
+
+                    </div>
+                    <div class="level">
+
+                    </div>
+               </div>
+            </div>
+
+            <div class="campos">
+                <button id="submit">Generate</button>
+            </div>
+
+
+        </section>
+    </section>
+</body>
+</html>
