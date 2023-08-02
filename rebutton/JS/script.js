@@ -16,15 +16,10 @@ const resetMap = () => {
     mapa.appendChild(loading)
 }
 
-updateBtn.addEventListener('click', (e) => {
-    getLocalizacao();
-})
-
-
-
 const getLocalizacao = () => {
-    resetMap();
-    
+      removeEventListener('click', getLocalizacao)
+      resetMap();
+
     let ajax = new XMLHttpRequest();
 
     ajax.open('GET', 'http://v100.000.pe/redbutton/PHP/getLocalizacao.php')
@@ -97,6 +92,8 @@ const getLocalizacao = () => {
 
     ajax.send()
 }
+
+updateBtn.addEventListener('click', getLocalizacao)
 
 getLocalizacao();
 
