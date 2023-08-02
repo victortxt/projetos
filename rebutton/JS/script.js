@@ -27,7 +27,7 @@ const getLocalizacao = () => {
     
     let ajax = new XMLHttpRequest();
 
-    ajax.open('GET', '../redbutton/PHP/giveLocalizacao.php')
+    ajax.open('GET', 'http://v100.000.pe/redbutton/PHP/getLocalizacao.php')
 
     ajax.onreadystatechange = () => {
     
