@@ -6,7 +6,7 @@ const mapa = document.querySelector('#mapa')
 const resetMap = () => {
    mapa.querySelectorAll('div').forEach((e) => {
         if(e){
-            //e.remove()
+            e.remove()
         }
    })
 
