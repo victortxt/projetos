@@ -1,0 +1,85 @@
+:root{
+    --anima: cubic-bezier(0.25, 0.46, 0.45, 0.94) ;
+}
+
+main{
+    margin-top: 170px;
+}
+
+#registros-container{
+    max-width: 500px;
+    height: 400px;
+    background-color: #f9f9f9;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.556);
+}
+
+#filterInput{
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.556);
+    transition: all .4s var(--anima);
+    outline: none;
+}
+
+#filterInput:focus{
+    transition: all .4s var(--anima);
+    background-color: rgba(109, 109, 245, 0.608);
+    outline: 3px solid rgba(4, 4, 175, 0.608);
+}
+
+#regs{
+    margin-top: 25px;
+    height: 300px;
+    overflow-y: scroll;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: rgb(67, 67, 67);
+}
+
+#containerDetails{
+    background-color: rgb(235, 235, 235);
+    max-width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    overflow-y: scroll;
+}
+
+.gridDetails{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    box-sizing: border-box;
+}
+
+.itemDetail{
+    background-color: white;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#closeDetails{
+    cursor: pointer;
+    background-color: rgb(122, 13, 13);
+    color: white;
+    padding: 5px;
+    margin-bottom: 15px;
+    border: none;
+    height: 60px;
+    font-size: 2em;
+}

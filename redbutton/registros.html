@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!--Google Icons-->
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/registros.css">
+    <script src="./JS/script.js" defer></script>
+    <script src="./JS/registros.js" defer></script>
+    <title>Registros</title>
+</head>
+<body>
+    <header>
+        <h1><span id="effectTitle">Red</span>button</h1>
+
+        <span class="material-symbols-outlined BtnGoogle" id="openMenuBtn">
+            menu
+            </span>
+    </header>
+    <div id="cardMenu" style="display: none;">
+        <div class="row" style="justify-content: space-between;">
+            <h1>MENU</h1>
+            <span class="material-symbols-outlined BtnGoogle" id="closeBtn">
+                close
+                </span>
+        </div>
+        <ul>
+            <li>
+                <a href="./video.html">Quem somos nós ?</a>
+            </li>
+            <li>
+                <a href="./registros.html">Registros</a>
+            </li>
+            <li>
+                <a href="./index.html">Inserir Ocorrência</a>
+            </li>
+        </ul>
+    </div>
+    <main>
+        <section id="registros-container">
+            <div class="filter">
+                <div id="regs">
+                    <!--Elementos-->
+
+
+                </div>
+            </div>
+        </section>
+
+        <!--Details-->
+        <section id="containerDetails"  style="display: none;">
+            <button id="closeDetails">Voltar</button>
+            <div class="gridDetails">
+                <div class="itemDetail">
+                    <h2>Ocorrência</h2>
+                    <p id="ocorrencia"></p>
+                </div>
+               
+                <div class="itemDetail">
+                    <h2>CEP</h2>
+                    <p id="cep"></p>
+                </div>
+    
+                <div class="itemDetail">
+                    <h2>Logradouro</h2>
+                    <p id="logradouro"></p>
+                </div>
+    
+                <div class="itemDetail">
+                    <h2>Bairro</h2>
+                    <p id="bairro"></p>
+                </div>
+    
+                <div class="itemDetail">
+                    <h2>Localidade</h2>
+                    <p id="localidade"></p>
+                </div>
+    
+                <div class="itemDetail">
+                    <h2>Uf</h2>
+                    <p id="uf"></p>
+                </div>
+
+                <div class="itemDetail">
+                    <h2>ddd</h2>
+                    <p id="ddd"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+</body>
+</html>

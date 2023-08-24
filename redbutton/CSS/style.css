@@ -1,0 +1,383 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root{
+    --color-one: rgb(239, 239, 239);
+    --color-two: rgb(228, 228, 228);
+    --color-three: rgb(75, 75, 75);
+    --color-red: rgb(210, 9, 9);
+    --anima: cubic-bezier(0.25, 0.46, 0.45, 0.94) ;
+}
+
+header{
+    background-color: var(--color-two);
+    padding: 20px 0px 0px 0px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.BtnGoogle{
+    cursor: pointer;
+    font-size: 2em;
+    background-color: var(--color-three);
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    transition: all .4s var(--anima);
+}
+
+.BtnGoogle:hover{
+    transition: all .4s var(--anima);
+    color: var(--color-red);
+    transform: scale(0.9);
+}
+
+#cardMenu {
+    position: fixed;
+    flex-direction: column;
+    align-items: start;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    width: 80vw;
+    background: linear-gradient(120deg, rgb(54, 54, 54), rgb(93, 93, 93));
+    z-index: 1000; /* Ajuste o z-index para que o cardMenu fique acima */
+    box-sizing: border-box;
+    padding: 15px;
+    position: relative;
+}
+
+#cardMenu ul{
+    list-style-position: inside;
+    text-align: left;
+}
+
+#cardMenu ul li{
+    width: 100%;
+    background-color: rgb(128, 128, 128);
+    border-radius: 25px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 1.5em;
+    margin: 15px 0px;
+    color: white;
+    transition: all .4s var(--anima);
+}
+
+#cardMenu ul li:hover{
+    transition: all .4s var(--anima);
+    background-color: var(--color-red);
+}
+
+#cardMenu a{
+    color: white;
+    text-decoration: none;
+}
+
+
+.row{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+
+h2{
+    font-weight: normal;
+    font-size: 1.4em;
+}
+
+#effectTitle{
+    background-color: var(--color-red) ;
+    box-sizing: border-box;
+    color: var(--color-one);
+    margin-right: 5px;
+    padding: 0px 5px 0px 5px;
+}
+
+.sessao{
+    padding: 15px;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+/*Ocorrencia config*/
+
+#TypeOcorrencia{
+    margin: 40px 0px;
+    text-align: center;
+}
+
+.containerOcorrencias{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    overflow-y: scroll;
+    height: 400px;
+    gap: 15px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.55);
+    border-radius: 5px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    outline: 1px solid var(--color-three);
+    cursor: pointer;
+    transition: all .4s var(--anima);
+}
+
+.card:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.342);
+}
+
+.card > article{
+    background-color: var(--color-three);
+    padding: 5px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 30%;
+    color: var(--color-one);
+}
+
+.card > article > h3{
+    font-size: .5em;
+}
+
+/*CEP*/
+
+#cepContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.CEPform{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+}
+
+.campos-cep,
+#dados{
+    max-width: 500px;
+}
+
+.campos-cep{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.CEPform input{
+    width: 100%;
+    margin: 5px;
+    border-bottom: 1px solid black;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    text-align: center;
+    padding: 5px;
+}
+
+.label{
+    font-weight: bolder;
+    margin-top: 5px;
+}
+
+.CEPform input::-webkit-inner-spin-button{
+    display: none;
+}
+
+.CEPform input:focus{
+    outline: none;
+}
+
+.CEPform button{
+    padding: 10px;
+    height: 100%;
+    border: none;
+    color: var(--color-one);
+    transition: all .4s var(--anima);
+}
+
+.CEPform button:hover{
+    transition: all .4s var(--anima);
+    transform: scale(0.9);
+}
+
+/*dado config*/
+
+
+#dados{
+    width: 100%;
+    height: 250px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    box-shadow: 0px 0px 10px black ;
+}
+
+#dados form{
+    display: flex;
+    flex-direction: column;
+}
+
+#dados input[type="text"]{
+    font-size: 1.5em;
+    padding: 5px;
+    margin: 10px 0px;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.379);
+}
+
+.erroMessage{
+    color: red;
+    text-align: center;
+    width: 100%;
+}
+
+#Redbutton{
+    background-color: var(--color-red);
+    width: 100%;
+    padding: 5px;
+    border: none;
+    margin-top: 5px;
+    color: white;
+    transition: all .4s var(--anima);
+    cursor: pointer;
+    height: 100px;
+    font-size: 2em;
+}
+
+#Redbutton:hover{
+    transform: scale(0.9);
+    transition: all .4s var(--anima);
+}
+
+.selectBtn{
+    background: var(--color-red) ;
+    border: none;
+    color: var(--color-one);
+    box-sizing: border-box;
+    padding: 5px;
+    transition: all .4s var(--anima);
+    cursor: pointer;
+}
+
+.selectBtn:hover{
+    transition: all .4s var(--anima);
+    background: linear-gradient(120deg, green 75%, rgb(255, 255, 255), green);
+}
+
+#searchCep{
+    background-color: rgb(87, 87, 255);
+}
+
+main{
+    margin-top: 20vh;
+}
+
+.card-ocorrencia{
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.contents{
+    display: flex;
+    flex-direction: column;
+}
+
+.contents h2{
+    width: 250px;
+    overflow: hidden;
+}
+
+.viewDetails{
+    background-color: rgb(183, 21, 21);
+    color: white;
+    padding: 5px;
+    box-sizing: border-box;
+    border: none;
+    transition: all .4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    cursor: pointer;
+}
+
+.viewDetails:hover{
+    background-color: rgb(211, 211, 211);
+    color: rgb(183, 21, 21);
+    transition: all .4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+
+@media screen and (min-width: 590px) {
+ 
+    main{
+        margin-top: 20vh;
+    }
+
+    .sessao{
+        margin: 30px 0px;
+        height: 100vh;
+    }
+
+    .selectBtn{
+        font-size: 1.5em;
+    }
+    
+    .containerOcorrencias{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 200px);
+        height: 400px;
+    }
+
+    
+
+    .card > article{
+        box-sizing: border-box;
+        height: 30%;
+    }
+
+    .card > article > h3{
+        font-size: 1em;
+    }
+
+    .CEPform input{
+        font-size: 2em;
+    }
+
+}
+
+@media screen and ((min-width: 701px)) {
+    header{
+        font-size: 2em;
+        text-align: left;
+        padding: 20px;
+    }
+}
