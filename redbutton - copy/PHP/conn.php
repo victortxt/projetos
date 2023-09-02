@@ -2,10 +2,10 @@
     header("Access-Control-Allow-Origin", "*");
 
 
-    $host = 'localhost';
-    $dbname = 'db_redbutton';
-    $user = 'root';
-    $senha = '';
+    $host = 'sql305.infinityfree.com';
+    $dbname = 'if0_34680985_db_redbutton2';
+    $user = 'if0_34680985';
+    $senha = 'SJJfufYXCjpE5L';
 
     $con = new mysqli($host, $user, $senha, $dbname);
 

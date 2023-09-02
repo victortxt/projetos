@@ -236,6 +236,7 @@ h2{
 }
 
 #ContainerDados{
+    background-color: red; 
     position: absolute;
     top: 60%;
     left: 50%;
@@ -415,7 +416,7 @@ main{
 
 }
 
-@media screen and ((min-width: 701px)) {
+@media screen and (min-width: 701px) {
     header{
         font-size: 2em;
         text-align: left;
