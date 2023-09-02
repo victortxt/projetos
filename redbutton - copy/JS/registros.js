@@ -1,5 +1,35 @@
 let regs = document.querySelector('#regs')
-const filterInput = document.querySelector('#filterInput')
+const filterInput = document.querySelector('#isearch')
+
+filterInput.addEventListener('keyup', (e) => {
+    let value = e.target.value.trim().toLowerCase()
+
+    regs.querySelectorAll('div .contents').forEach((element) => {
+        //element
+        let type = element.querySelector('h2').textContent.trim().toLowerCase()
+        let lastIndex = type.lastIndexOf(' ');
+        let textType = type.substring(lastIndex)
+
+        let local = element.querySelector('h3').textContent.trim().toLowerCase()
+        let textLocal = (local.replace(/local: | \| /g, ''));
+
+
+
+        if(value){
+            if(textType.includes(value) || textLocal.includes(va)){
+                element.parentNode.style.display = 'flex'
+            }else{
+                element.parentNode.style.display = 'none'
+            }
+        }else{
+            regs.querySelectorAll('div .contents').forEach((element) => {
+                element.parentNode.style.display = 'flex'
+            })
+        }
+
+    })  
+
+})
 
 const requestFunc = () => {
     let request = new XMLHttpRequest();
@@ -12,6 +42,7 @@ const requestFunc = () => {
             let JSONresponse = request.responseText
             let JSresponse = JSON.parse(JSONresponse)
             let id = 0
+            console.log(JSresponse)
 
             JSresponse.forEach(element => {
                 let divContainer = document.createElement('div')

@@ -226,31 +226,63 @@ h2{
 
 /*dado config*/
 
+/*---------------------------*/
 
 #dados{
-    width: 100%;
-    height: 250px;
+    padding: 15px;
+    box-shadow: 0px 0px 10px black ;
+    background-color: white;
     overflow-y: auto;
+}
+
+#ContainerDados{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 350px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 15px;
-    box-shadow: 0px 0px 10px black ;
 }
+
+#ContainerDados button{
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.pessoalInfo{
+    width: 100%;
+    background-color: red;
+}
+
 
 #dados form{
     display: flex;
     flex-direction: column;
 }
 
-#dados input[type="text"]{
-    font-size: 1.5em;
-    padding: 5px;
-    margin: 10px 0px;
+#dados input{
     border: none;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.379);
+    margin: 10px 0px;
+    height: 40px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.509);
+    padding: 5px;
+    box-sizing: border-box;
 }
+
+#dados textarea{
+    background-color: rgb(255, 203, 61);
+    padding: 5px;
+    box-sizing: border-box;
+    border: none;
+}
+
+/*---------------------------*/
+
 
 .erroMessage{
     color: red;
@@ -335,8 +367,17 @@ main{
     transition: all .4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
+#googleMaps{
+    width: 100%;
+    margin: 80px 0px;
+}
+
 
 @media screen and (min-width: 590px) {
+
+    #ContainerDados{
+        max-width: 500px;
+    }
  
     main{
         margin-top: 20vh;

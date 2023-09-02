@@ -83,3 +83,22 @@ main{
     height: 60px;
     font-size: 2em;
 }
+
+#isearch{
+    background-color: white;
+    border: none;
+    border: 1px solid rgb(122, 13, 13);
+    box-sizing: border-box;
+    width: 100%;
+    transition: all .4s cubic-bezier(0.39, 0.575, 0.565, 1);
+    height: 50px;
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+#isearch:focus{
+    transition: all .4s cubic-bezier(0.39, 0.575, 0.565, 1);
+    outline: none;
+    border: 1px solid rgb(71, 71, 255);
+    background-color: #e6e6e6;
+}
