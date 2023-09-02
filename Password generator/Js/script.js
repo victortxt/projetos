@@ -37,12 +37,11 @@ submitBtn.addEventListener('click', () => {
         let senha = ''
         for(let i = 0; i < comprimentoSenha.value; i++){
             let random = Math.floor(Math.random() * caracteres.length);
-            console.log(random)
+            
             senha += caracteres[random]
         }
-        console.log(senha);
+        
         output.innerHTML = senha;
-        console.log(senha)
         chave = true
 
     }
@@ -122,9 +121,6 @@ submitBtn.addEventListener('click', () => {
     }
 
 
-    console.log('---')
-
-
     const reset = () => {
         caracteres = [];
     }
@@ -137,8 +133,6 @@ submitBtn.addEventListener('click', () => {
 
 })
 
-
-console.log(caracteres)
 
 copy.addEventListener('click' ,() => {
     navigator.clipboard.writeText(output.textContent)
